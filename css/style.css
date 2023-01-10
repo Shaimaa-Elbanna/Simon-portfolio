@@ -1,0 +1,252 @@
+:root{
+    --mainColor:#20c997;
+    
+}
+
+#home{
+
+    background-image: url(../img/intro-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.637);
+    height: 100%;
+}
+ .navbar-brand:hover ,.navbar-brand ,.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover{
+    color: var(--mainColor);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--mainColor);
+}
+
+.nav-link{
+
+    position: relative;
+}
+
+
+.nav-link::after{
+
+    content: "";
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    left: 10px;
+    bottom: 0%;
+background-color:var(--mainColor);
+transition: all 0.5s;
+
+}
+
+.nav-link:hover::after{
+    width: 40px;
+}
+
+.home-content h2{
+    position: relative;
+}
+
+.home-content h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    animation: home-anmi 2s infinite ;
+    font-size: 50px;
+}
+
+@keyframes home-anmi {
+    0%{
+        content:"iam semon|";
+    }
+
+    20%{
+        content:"
+        im a freelance";
+
+    }
+    40%{
+        content:"iam a photogragher|";
+
+    }
+
+    60%{
+        content:"
+        im a developer";
+
+    }
+    100%{
+        content: "i am simon |"; 
+    }
+}
+
+.btn  {
+    color: var(--mainColor) ;
+    border: var(--mainColor) solid 1px !important;
+
+}
+.btn:hover{
+    background-color: var(--mainColor)!important;
+    color: #fff;
+    
+
+
+} 
+
+.fa-position{
+    width: 30px;
+    height: 4.5rem;
+    position: absolute;
+top:90% ;    
+left: 50%;
+transform: translateX(-50%);
+    animation: home-arrow 2s infinite ;
+
+}
+
+@keyframes home-arrow {
+    0%{top: 90%;
+    
+    }
+    20%{
+        top: 92%;
+    }
+    40%{
+        top: 94%;
+
+    }
+    60%{
+        top: 96%;
+    }
+    100%{
+        top: 98%;
+        opacity: 0;
+    }
+    
+}
+.side{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    top: 40%;
+    right: 0%;
+    background-color: rgb(88, 85, 85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10% 0% 0% 10%;
+}
+.fa-solid{
+    color: #fff;
+}
+
+.pos{
+
+   color: #f1f1f1;
+    font-size: 10rem;
+    font-weight: 700;
+}
+
+.pos2{
+    position: relative;
+    left: 50%;
+    padding-bottom: 10px;
+
+    
+    transform: translate(-50% , 150%);
+
+
+}
+ .pos2::after{
+
+    content: "";
+    width: 5rem;
+    height: 2px;
+    position: absolute;
+    bottom: 0%;
+    left: 30%;
+    background-color: var(--mainColor);
+ }
+ 
+
+ .unique{
+    color: var(--mainColor);
+ }
+ .item-fet{
+    border: #f1f1f1 2px solid;
+      border-radius: 10px;
+      /* box-sizing: border-box; */
+} 
+.tex1{
+    font-size: 900%;
+    font-weight: 700;
+    color: #f1f1f1;
+
+}
+.tex2{
+    transform: translateY(100%);
+
+position: relative;
+
+}
+.tex2::after{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 15%;
+    background-color: var(--mainColor);
+    width: 6rem;
+    height: 2px;
+}
+ 
+.img-st{
+    border-radius:9px;
+   
+}
+
+.portfolio-overlay{
+    
+    position: absolute;
+    left: 0px;
+     bottom: 100px;
+    right: 0px;
+    top: 0;
+   background-color:#f1f1f1;
+   opacity: 0;
+   transition: all 0.5s;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+
+.portfolio-item{
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.portfolio-item:hover .portfolio-overlay{
+    opacity: 1;
+    bottom: 0px;
+
+
+}
+
+
+.portfolio-item:hover img{
+    transform: scale(1.2);
+
+}
+.portfolio-item img{
+    transition: all 0.3s;
+}
